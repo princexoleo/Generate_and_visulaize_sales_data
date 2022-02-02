@@ -27,7 +27,21 @@ This is Django based web projects. The codebase shows the authentication feature
 
 
 ## Installation
-The installation packages are given in the `reports_project/requirements.txt` files. To install the requirements run below command
+Run below command to clone this project.
+```
+git clone "https://github.com/princexoleo/Generate_and_visulaize_sales_data.git"
+```
+Change the directory to the project directory.
+```
+cd reports_project
+```
+You can see the project directories like,
+
+reports_projects
+  |--src
+  |--requirements.txt
+
+The installation packages are given in the `reports_project/requirements.txt` files. Before that you have to install Python in your system. To install the Python check out the official websites [Python](https://www.python.org/). After installation Python, now install the `virtualenv` and creates a virtual environments name as you preferred. Activate the virtualenv & run below command to install require packages for this project. 
 ```
 pip install -r requirements.txt
 
@@ -36,7 +50,15 @@ This will install all the requirements file for this project.
 
 
 ## Run
+To run this project in your local machine, go to the `src` folder and run below command.
+```
+cd src/
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 
+```
+Now if you browes the (https://127.0.0.1:8000/) in the browser, you can see the login page.
 
 ## Conclusion
 
