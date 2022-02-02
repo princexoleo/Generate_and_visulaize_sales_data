@@ -1,0 +1,51 @@
+{% load static %}
+
+{% url 'sales:home' as path_home %}
+{% url 'reports:list' as path_report %}
+{% url 'reports:upload_from' as path_upload_file %}
+{% url 'profiles:my_profile' as path_my_profile %}
+{% url 'logout' as path_logout %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{{path_home}}">
+      <img src="{% static 'logo.png' %}" class="logo-sm" width="50" height="50">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          {% if request.path == path_home %}
+          <a class="nav-link active" href="{{path_home}}">Home</a>
+          {% else %}
+          <a class="nav-link" href="{{path_home}}">Home</a>
+          {% endif %}
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path_home}}">Sales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path_upload_file}}">Add from file</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{path_report}}">Reports</a>
+        </li>
+      </ul>
+    </div>
+    {% if request.user.is_authenticated %}
+      <div class="nav-item dropdown">
+        <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="{{request.user.profile.profile_pic.url}}" class="avatar-sm">&nbsp;{{request.user.profile.user.username}}
+        </div>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          {% if request.path == path_my_profile %}
+          <li><a class="dropdown-item" active href="{{path_my_profile}}">{{request.user.username}}</a></li>
+          {% else %}
+          <li><a class="dropdown-item" href="{{path_my_profile}}">{{request.user.username}}</a></li>
+          {% endif %}
+          <li><a class="dropdown-item" href="{{path_logout}}">Logout</a></li>
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</nav>

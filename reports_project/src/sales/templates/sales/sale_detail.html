@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Sale Details{% endblock title %}
+
+{% block content %}
+DetailView of the Sale
+ 
+ <div class='card mb-3'>
+    <div class='card-body'>
+        PrimaryKey: {{ object.pk}} <br>
+        TransactionID: {{object.transaction_id}} <br>
+        Total Price: {{ object.total_price }}
+    </div>
+ </div>
+<a href="{{request.META.HTTP_REFERER}}">Go back</a>
+{% endblock content %}

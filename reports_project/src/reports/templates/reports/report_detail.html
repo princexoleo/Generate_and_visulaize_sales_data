@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Report Details{% endblock title %}
+
+{% block content %}
+DetailView of the Report
+
+<div class="card mb-3">
+    {% if report.image %}
+        <img class="card-img-top" src={{report.image.url}} alt="{{report.name}}">
+    {% endif %}
+
+    <div class="card-body">
+        <h5 class="card-title">{{report.name}}</h5>
+        <p class="card-text">{{report.remarks}}</p>
+        
+    </div>
+</div>       
+
+ 
+ {% comment %} <div class='card mb-3'>
+    <div class='card-body'>
+        PrimaryKey: {{ report.pk}} <br>
+        Report Name: {{report.name}} <br>
+        Report Remarks: {{ report.remarks }}
+    </div>
+ </div> {% endcomment %}
+<a href="{{request.META.HTTP_REFERER}}">Go back</a>
+{% endblock content %}

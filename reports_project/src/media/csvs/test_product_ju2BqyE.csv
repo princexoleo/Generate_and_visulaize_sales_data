@@ -1,0 +1,13 @@
+Pos,Transaction_id,Product,Quantity,Customer,Date
+1,E100,Samsung TV,1,Test,2/1/2022
+2,E101,Samsung TV,2,ABC,3/1/2022
+3,E102,Samsung S22,4,Sample,4/1/2022
+4,E103,Dell,6,Munna,5/1/2022
+5,E104,Dell,3,Priyo,16/1/2022
+6,E105,Dell,2,Gazi,7/1/2022
+7,E106,Samsung TV,1,Syed,8/1/2022
+8,E107,Samsung S22,2,Gazi,19/1/2022
+9,E108,Samsung S22,4,Shima,10/1/2022
+10,E109,Dell,3,Munna,11/1/2022
+11,E110,Dell,2,Priyo,12/1/2022
+13,E111,Samsung TV,1,Shima,13/1/2022
