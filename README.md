@@ -27,38 +27,32 @@ This is Django based web projects. The codebase shows the authentication feature
 
 
 ## Installation
-Run below command to clone this project.
-```
-git clone "https://github.com/princexoleo/Generate_and_visulaize_sales_data.git"
-```
-Change the directory to the project directory.
-```
-cd reports_project
-```
-You can see the project directories like,
-```
-reports_projects
-  |--src
-  |--requirements.txt
+The first thing to do is to clone the repository:
 
+```sh
+$ git clone https://github.com/princexoleo/Generate_and_visulaize_sales_data.git
+$ cd reports_project
 ```
 
-The installation packages are given in the `reports_project/requirements.txt` files. Before that you have to install Python in your system. To install the Python check out the official websites [Python](https://www.python.org/). After installation Python, now install the `virtualenv` and creates a virtual environments name as you preferred. Activate the virtualenv & run below command to install require packages for this project. 
+Create a virtual environment to install dependencies in and activate it:
+
+```sh
+$ mkvirtualenv env
+$ workon env
 ```
-pip install -r requirements.txt
 
+Then install the dependencies:
+
+```sh
+(env)$ pip install -r requirements.txt
 ```
-This will install all the requirements file for this project.
+Note the `(env)` in front of the prompt. This indicates that this terminal
+session operates in a virtual environment set up by `virtualenv2`.
 
-
-## Run
-To run this project in your local machine, go to the `src` folder and run below command.
-```
-cd src/
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-
+Once `pip` has finished downloading the dependencies:
+```sh
+(env)$ cd src/
+(env)$ python manage.py runserver
 ```
 Now if you browes the (https://127.0.0.1:8000/) in the browser, you can see the login page.
 
