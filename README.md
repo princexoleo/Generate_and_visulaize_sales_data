@@ -36,10 +36,12 @@ Change the directory to the project directory.
 cd reports_project
 ```
 You can see the project directories like,
-
+```
 reports_projects
   |--src
   |--requirements.txt
+
+```
 
 The installation packages are given in the `reports_project/requirements.txt` files. Before that you have to install Python in your system. To install the Python check out the official websites [Python](https://www.python.org/). After installation Python, now install the `virtualenv` and creates a virtual environments name as you preferred. Activate the virtualenv & run below command to install require packages for this project. 
 ```
